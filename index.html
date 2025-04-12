@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | RAJAONARISON Princy</title>
+  <!-- Font + Icons + AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --bg: #f9fafb;
+      --text: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(90deg, #1f2937, #4b5563);
+      --footer-bg: #f3f4f6;
+      --title-color: #1f2937;
+    }
+
+    body.dark {
+      --bg: #111827;
+      --text: #e5e7eb;
+      --card-bg: #1f2937;
+      --header-bg: linear-gradient(90deg, #111827, #1f2937);
+      --footer-bg: #1f2937;
+      --title-color: #ffffff;
+    }
+
+    body.purple {
+      --primary: #8b5cf6;
+    }
+
+    body.green {
+      --primary: #10b981;
+    }
+
+    body.orange {
+      --primary: #f97316;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.3s ease;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .toggle-theme, .color-scheme {
+      position: absolute;
+      top: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .toggle-theme { right: 60px; }
+    .color-scheme { right: 20px; }
+
+    .cv-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cv-btn:hover {
+      opacity: 0.9;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 960px;
+      margin: 30px auto;
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      transition: background 0.3s ease;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--title-color);
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    .contact i {
+      margin-right: 8px;
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--footer-bg);
+      font-size: 14px;
+      color: #6b7280;
+      transition: background 0.3s ease;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      section { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="toggle-theme" onclick="toggleTheme()" title="Mode clair/sombre">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="color-scheme" onclick="cycleColor()" title="Changer les couleurs">
+      <i class="fas fa-palette"></i>
+    </button>
+    <h1>RAJAONARISON Princy</h1>
+    <p>Développeur Web & Mobile Junior</p>
+    <a class="cv-btn" href="CV_Princy.pdf" download><i class="fas fa-download"></i> Télécharger mon CV</a>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>À propos</h2>
+    <p>Passionné par la programmation, je suis diplômé en développement web et application mobile. Je conçois des sites web dynamiques, des applications mobiles et des logiciels sur mesure.</p>
+  </section>
+
+  <section data-aos="fade-up" data-aos-delay="100">
+    <h2>Compétences techniques</h2>
+    <ul>
+      <li><strong>Langages :</strong> HTML, CSS, JavaScript, PHP, Java, Python, C++, C#</li>
+      <li><strong>Frameworks :</strong> Laravel, Django, TkInter, Ajax, API Platform, Bootstrap</li>
+      <li><strong>Outils :</strong> VS Code</li>
+      <li><strong>Modélisation :</strong> UML</li>
+      <li><strong>Systèmes :</strong> Windows</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up" data-aos-delay="200">
+    <h2>Projets réalisés</h2>
+    <ul>
+      <li>Application Web complète avec Laravel, HTML/CSS, JavaScript</li>
+      <li>Application mobile de gestion de caisse sous Java (Android Studio)</li>
+      <li>Logiciel de gestion de stock et inventaire (C#)</li>
+      <li>Application de gestion des étudiants (Python, C++)</li>
+      <li>Site web dynamique de l'association Tokontany Be Malagasy (en cours)</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up" data-aos-delay="300">
+    <h2>Expériences professionnelles</h2>
+    <ul>
+      <li><strong>2024</strong> – Stage pro (FIFATECH) : création d’un logiciel de gestion de stocks</li>
+      <li><strong>2024</strong> – ARM : maintenance réseau (4 jours)</li>
+      <li><strong>2024</strong> – FID : installation de réseaux (4 semaines)</li>
+      <li><strong>2022</strong> – EDENA : stage d’analyse logiciel de stock (6 semaines)</li>
+    </ul>
+  </section>
+
+  <section class="contact" data-aos="fade-up" data-aos-delay="400">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> princyrajy26@gmail.com</p>
+    <p><i class="fas fa-phone"></i> +261 37 60 86 589</p>
+    <p><i class="fas fa-map-marker-alt"></i> Lot IVY 97K Ampangabe, Anosipatrana, Antananarivo, Madagascar</p>
+  </section>
+
+  <footer>
+    &copy; 2024 RAJAONARISON Princy. Tous droits réservés.
+  </footer>
+
+  <!-- JS pour animations + thème -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    const colorSchemes = ['default', 'purple', 'green', 'orange'];
+    let currentColor = 0;
+
+    function cycleColor() {
+      currentColor = (currentColor + 1) % colorSchemes.length;
+      const body = document.body;
+      body.classList.remove(...colorSchemes);
+      if (colorSchemes[currentColor] !== 'default') {
+        body.classList.add(colorSchemes[currentColor]);
+      }
+    }
+  </script>
+</body>
+</html>
